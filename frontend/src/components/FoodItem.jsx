@@ -22,12 +22,12 @@ const FoodItem = ({ id, name, price, description, image }) => {
         {!cartItems[id] ? (
           <button
             onClick={() => addToCart(id)}
-            className="absolute bottom-4 right-4 bg-white text-primary font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all btn-ripple flex items-center gap-2"
+            className="absolute bottom-8 right-4 bg-white text-primary font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all btn-ripple flex items-center gap-2"
           >
             <FaPlus className="text-sm" /> Add to Cart
           </button>
         ) : (
-          <div className="absolute bottom-4 right-4 bg-white rounded-full flex items-center gap-3 px-3 py-2 shadow-lg">
+          <div className="absolute bottom-8 right-4 bg-white rounded-full flex items-center gap-3 px-3 py-2 shadow-lg">
             <button
               onClick={() => removeFromCart(id)}
               className="text-primary hover:text-red-500 transition-colors"
