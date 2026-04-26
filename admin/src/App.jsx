@@ -8,7 +8,7 @@ import List from './pages/List';
 import Orders from './pages/Orders';
 
 function App() {
-  const url = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const url = import.meta.env.VITE_API_URL || 'https://food-delivery-web-app-uraa.onrender.com';
 
   return (
     <div className="min-h-screen bg-gray-50">

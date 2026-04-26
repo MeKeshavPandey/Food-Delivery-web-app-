@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../context/StoreContext';
 import axios from 'axios';
-import { FaBox, FaShippingFast, FaCheckCircle } from 'react-icons/fa';
+import { FaBox, FaShippingFast, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 const MyOrders = () => {
   const { url, token } = useContext(StoreContext);
@@ -34,6 +34,10 @@ const MyOrders = () => {
     switch (status) {
       case 'Food Processing':
         return <FaBox className="text-orange-500" />;
+      case 'Accepted':
+        return <FaCheckCircle className="text-green-500" />;
+      case 'Rejected':
+        return <FaTimesCircle className="text-red-500" />;
       case 'Out for Delivery':
         return <FaShippingFast className="text-blue-500" />;
       case 'Delivered':
@@ -47,6 +51,10 @@ const MyOrders = () => {
     switch (status) {
       case 'Food Processing':
         return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'Accepted':
+        return 'bg-green-100 text-green-800 border-green-200';
+      case 'Rejected':
+        return 'bg-red-100 text-red-800 border-red-200';
       case 'Out for Delivery':
         return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'Delivered':

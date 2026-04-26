@@ -182,7 +182,7 @@ export const updateStatus = async (req, res) => {
       });
     }
 
-    const validStatuses = ['Food Processing', 'Out for Delivery', 'Delivered'];
+    const validStatuses = ['Food Processing', 'Accepted', 'Rejected', 'Out for Delivery', 'Delivered'];
     if (!validStatuses.includes(status)) {
       return res.status(400).json({ 
         success: false, 

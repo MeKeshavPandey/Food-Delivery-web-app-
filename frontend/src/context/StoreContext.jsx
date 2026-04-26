@@ -4,7 +4,7 @@ import axios from 'axios';
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const url = import.meta.env.VITE_API_URL || 'https://food-delivery-web-app-uraa.onrender.com';
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState('');
   const [foodList, setFoodList] = useState([]);

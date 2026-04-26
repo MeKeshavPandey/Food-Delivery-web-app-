@@ -81,7 +81,7 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['Food Processing', 'Out for Delivery', 'Delivered'],
+    enum: ['Food Processing', 'Accepted', 'Rejected', 'Out for Delivery', 'Delivered'],
     default: 'Food Processing'
   },
   payment: {
